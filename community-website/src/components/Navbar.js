@@ -6,9 +6,13 @@ const Navbar = () => {
   return (
     <nav>
       <ul className="navbar">
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About Us</Link></li>
+        <li><Link to="/components">Home</Link></li>
+        <li><Link to="/aboutUs">About Us</Link></li>
         <li><Link to="/services">Services</Link></li>
+        <li><Link to="/activities">Activities</Link></li>
+        <li><Link to="/venueHire">Venue Hire</Link></li>
+        <li><Link to="/volunteering">Volunteering</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
       </ul>
     </nav>
   );
