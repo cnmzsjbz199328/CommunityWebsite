@@ -5,10 +5,10 @@ import Footer from './components/Footer';
 import Home from './components/Home';
 import AboutUs from './aboutUs/AboutUS';
 import Services from './services/Services';
-import Activities from './activities/Activities.js';
-import Volunteering from './volunteering/Volunteering.js';
-import Contact from './contact/Contact.js';
-import VenueHire from './venueHire/VenueHire.js';
+import Activities from './activities/Activities';
+import Volunteering from './volunteering/Volunteering';
+import Contact from './contact/Contact';
+import VenueHire from './venueHire/VenueHire';
 import './App.css';
 import ErrorBoundary from './ErrorBoundary';
 
