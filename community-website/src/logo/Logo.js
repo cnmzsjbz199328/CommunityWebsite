@@ -1,20 +1,11 @@
 import React, { useState } from 'react';
 import './Logo.css';
+import Post from '../components/Post';
 
-function Logo({ title, imageLink }) {
-    const [imageError, setImageError] = useState(false);
-
+function Logo({postId}) {
     return (
         <div className='logo-container'>
-            {imageError ? (
-                <div className="image-placeholder">Image not available</div>
-            ) : (
-                <img 
-                    src={imageLink} 
-                    alt={title} 
-                    onError={() => setImageError(true)} 
-                />
-            )}
+            <Post postId={14} />
         </div>
     );
 }
