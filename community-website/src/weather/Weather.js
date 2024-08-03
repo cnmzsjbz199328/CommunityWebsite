@@ -12,7 +12,7 @@ function Weather() {
         const params = {
             latitude: -35.0847,
             longitude: 138.5497,
-            daily: 'temperature_2m_max,temperature_2m_min,uv_index_max,uv_index_clear_sky_max,precipitation_sum,precipitation_hours',
+            daily: 'weather_code,temperature_2m_max,temperature_2m_min,uv_index_max,uv_index_clear_sky_max,precipitation_sum,precipitation_hours',
             timezone: 'auto'  // Ensure timezone handling as needed
         };
 
@@ -32,19 +32,53 @@ function Weather() {
     if (error) return <div>Error fetching weather data!</div>;
     if (!weather) return <div>No weather data found.</div>;
 
+    const weatherCode = weather.daily.weather_code[0];
+    const iconUrl = weatherIconMap[weatherCode];
+    const weatherDescription = weatherDescriptionMap[weatherCode];
+
     return (
         <div className="weather-container">
-            <h2>Weather Forecast</h2>
+            <div className="weather-icon">
+                {iconUrl && <img src={iconUrl} alt="Weather Icon" />}
+                <p>{weatherDescription}</p>
+            </div>
             {weather && (
-                <>
-                    <p>Maximum Temperature: {weather.daily.temperature_2m_max[0]}°C</p>
-                    <p>Minimum Temperature: {weather.daily.temperature_2m_min[0]}°C</p>
+                <div className="weather-info">
+                    <p>Max Temp: {weather.daily.temperature_2m_max[0]}°C</p>
+                    <p>Min Temp: {weather.daily.temperature_2m_min[0]}°C</p>
                     <p>UV Index: {weather.daily.uv_index_max[0]}</p>
-                    <p>Total Precipitation: {weather.daily.precipitation_sum[0]} mm</p>
-                </>
+                    <p>Precipitation: {weather.daily.precipitation_sum[0]} mm</p>
+                </div>
             )}
         </div>
     );
 }
+
+const weatherIconMap = {
+    "0": "https://openweathermap.org/img/wn/01d.png", // Clear sky
+    "1": "https://openweathermap.org/img/wn/02d.png", // Few clouds
+    "2": "https://openweathermap.org/img/wn/03d.png", // Scattered clouds
+    "3": "https://openweathermap.org/img/wn/04d.png", // Broken clouds
+    "45": "https://openweathermap.org/img/wn/50d.png", // Fog
+    "61": "https://openweathermap.org/img/wn/10d.png", // Light rain
+    "63": "https://openweathermap.org/img/wn/09d.png", // Heavy rain
+    "95": "https://openweathermap.org/img/wn/11d.png", // Thunderstorm
+    "71": "https://openweathermap.org/img/wn/13d.png", // Snow
+    // Add additional mappings as necessary
+};
+
+const weatherDescriptionMap = {
+    "0": "Clear sky",
+    "1": "Few clouds",
+    "2": "Scattered clouds",
+    "3": "Broken clouds",
+    "804": "Overcast clouds",
+    "45": "Fog",
+    "61": "Light rain",
+    "63": "Heavy rain",
+    "95": "Thunderstorm",
+    "71": "Snow",
+    // Continue for other codes...
+};
 
 export default Weather;

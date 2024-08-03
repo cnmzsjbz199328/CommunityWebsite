@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './Logo.css';
 import Post from '../components/Post';
 
-function Logo({postId}) {
+function Logo({postLogoId}) {
     return (
         <div className='logo-container'>
-            <Post postId={14} />
+            <Post postId={postLogoId} />
         </div>
     );
 }

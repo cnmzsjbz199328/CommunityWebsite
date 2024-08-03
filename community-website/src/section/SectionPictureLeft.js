@@ -2,15 +2,15 @@ import React from 'react';
 import './Section.css';
 import Post from '../components/Post'; // 更新路径
 
-function SectionPictureLeft({postId}) {
+function SectionPictureLeft({ postIdphoto, postIdtext }) {
 
     return (
         <div className='section'>
             <div className="image-container">
-            <Post postId={1} />
+                <Post postId={postIdphoto} />
             </div>
             <div className="text-container">
-                <Post postId={8} />
+                <Post postId={postIdtext} />
             </div>
         </div>
     );

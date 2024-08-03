@@ -7,7 +7,7 @@ import Weather from '../weather/Weather';
 const Navbar = () => {
   return (
     <nav className="navbar">
-      <Logo />
+      <Logo postLogoId ={14}/>
       <ul className="navbar-menu">
         <li><Link to="/components">Home</Link></li>
         <li><Link to="/aboutUs">About Us</Link></li>

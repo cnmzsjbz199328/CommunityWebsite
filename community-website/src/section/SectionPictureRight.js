@@ -7,10 +7,10 @@ function SectionPictureRight({postIdtext, postIdphoto}) {
     return (
         <div className='section'>
             <div className="text-container">
-            <Post postIdtext={postIdtext} />
+            <Post postId={postIdtext} />
             </div>
             <div className="image-container">
-                <Post postIdphoto={postIdphoto} />
+                <Post postId={postIdphoto} />
             </div>
         </div>
     );
