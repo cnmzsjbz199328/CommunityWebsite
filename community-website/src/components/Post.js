@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function Post({ postId }) {
+function Post({ postId, onContentLoaded }) {
     const [post, setPost] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
@@ -11,13 +11,16 @@ function Post({ postId }) {
             .then(response => {
                 setPost(response.data);
                 setLoading(false);
+                if (onContentLoaded) {
+                    onContentLoaded(response.data.content.rendered); // 调用回调函数，传递文章内容
+                }
             })
             .catch(error => {
                 console.error('Error fetching post:', error);
                 setError(error);
                 setLoading(false);
             });
-    }, [postId]);
+    }, [postId, onContentLoaded]); // 加入 onContentLoaded 依赖
 
     if (loading) return <div>Loading...</div>;
     if (error) return <div>Error loading post!</div>;
@@ -32,4 +35,3 @@ function Post({ postId }) {
 }
 
 export default Post;
-
