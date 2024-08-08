@@ -1,0 +1,108 @@
+/* Services.css */
+
+.services {
+    background-color: #f0f8ff; /* 浅蓝色背景 */
+    border: 2px solid #00bfff; /* 深蓝色边框 */
+    border-radius: 10px; /* 圆角边框 */
+    padding: 20px; /* 内边距 */
+    margin: 20px 0; /* 外边距 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+    font-family: 'Arial', sans-serif; /* 字体 */
+    color: #333; /* 文字颜色 */
+    transition: transform 0.3s ease; /* 动画效果 */
+}
+
+.services:hover {
+    transform: scale(1.05); /* 鼠标悬停时放大 */
+}
+
+.services-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.service-item {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.nav-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.nav-buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.icon-button {
+    display: flex;
+    flex-direction: column; /* 垂直排列 */
+    align-items: center;
+    padding: 10px;
+    margin: 5px;
+    border: none;
+    background-color: #d7dac8;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.icon-button:hover {
+    background-color: #e0e0e0;
+}
+
+.icon-button svg {
+    font-size: 17em; /* 调整图标大小 */
+}
+
+.icon-button span {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 5px;
+    margin-left: 0; /* 移除左边距 */
+    font-size: 20px;
+}
+
+.section {
+    display: flex;
+    flex-direction: row-reverse; /* 右侧文本 */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.empty-container {
+    flex: 1  1  50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin-right: 20px;
+}
+
+.text-container {
+    flex: 1 1 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.service-icon {
+    font-size: 5em;
+    color: #333;
+}

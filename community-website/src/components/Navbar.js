@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Logo from '../logo/Logo';
 import Weather from '../weather/Weather';
-import Magnifier from '../magnifier/Magnifier';
 
 const Navbar = () => {
   return (
@@ -19,7 +18,6 @@ const Navbar = () => {
         <li><Link to="/contact">Contact</Link></li>
       </ul>
       <Weather />
-      <Magnifier />
     </nav>
   );
 };
