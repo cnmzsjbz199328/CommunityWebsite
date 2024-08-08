@@ -1,6 +1,0 @@
-@PollyApi_HostAddress = http://localhost:5236
-
-GET {{PollyApi_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###
