@@ -8,8 +8,10 @@ function AboutUs() {
     <div className="about-us">
       <h1>About Us</h1>
       <p>Learn more about who we are and what we do.</p>
-      <SectionPictureLeft postIdphoto={1} postIdtext={8} />
-      <SectionPictureRight postIdphoto={2} postIdtext={37} />
+      <SectionPictureLeft postIdphoto={1} postIdtext={37} />
+      <SectionPictureRight postIdphoto={2} postIdtext={39} />
+      <SectionPictureLeft postIdphoto={1} postIdtext={41} />
+      <SectionPictureRight postIdphoto={2} postIdtext={46} />
     </div>
   );
 }
