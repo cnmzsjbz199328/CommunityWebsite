@@ -34,7 +34,7 @@
 }
 
 .nav-buttons button {
-    margin: 0 10px;
+    margin: 0 34px;
     padding: 10px 20px;
     cursor: pointer;
 }
@@ -46,7 +46,6 @@
     padding: 10px;
     margin: 5px;
     border: none;
-    background-color: #d7dac8;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -87,7 +86,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px;
     margin-right: 20px;
 }
 
@@ -98,15 +96,13 @@
     align-items: flex-start;
     padding: 20px;
     background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 8px;
     height: 100%;
     overflow: auto; /* 滚动条 */
 }
 
 .service-icon {
-    font-size: 5em;
-    color: #333;
+    font-size: 7em;
+    color: #50a5f1;
 }
 
 .nav-buttons-vertical {

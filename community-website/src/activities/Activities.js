@@ -1,7 +1,10 @@
 import React from 'react';
 import SwipeableViews from 'react-swipeable-views';
 import '../activities/Activities.module.css';
-import SectionPictureRight from '../section/SectionPictureRight';
+import SectionTextRight from '../section/SectionTextRight';
+import OpArtEffect from '../specialEffect/OpArtEffect';
+import DancingTrees from '../specialEffect/DancingTrees';
+import Nucl from '../specialEffect/Nucl';
 
 function Activities() {
     const [index, setIndex] = React.useState(0);
@@ -40,39 +43,39 @@ function Activities() {
                 </div>
                 <SwipeableViews index={index} onChangeIndex={handleChangeIndex} className='swipeable-views'>
                     <div className='activity-item'>
-                        <SectionPictureRight postIdtext={10} postIdphoto={2}>
-                            <span>Hobbies Content</span>
-                        </SectionPictureRight>
+                        <SectionTextRight postIdtext={90}>
+                        <OpArtEffect />                     
+                        </SectionTextRight>
                     </div>
                     <div className='activity-item'>
-                        <SectionPictureRight postIdtext={12} postIdphoto={3}>
-                            <span>Exercises Content</span>
-                        </SectionPictureRight>
+                        <SectionTextRight postIdtext={92}>
+                        <DancingTrees />
+                        </SectionTextRight>
                     </div>
                     <div className='activity-item'>
-                        <SectionPictureRight postIdtext={14} postIdphoto={4}>
-                            <span>For the Kids Content</span>
-                        </SectionPictureRight>
+                        <SectionTextRight postIdtext={96}>
+                        <Nucl />
+                        </SectionTextRight>
                     </div>
                     <div className='activity-item'>
-                        <SectionPictureRight postIdtext={16} postIdphoto={5}>
-                            <span>Technical Help Content</span>
-                        </SectionPictureRight>
+                        <SectionTextRight postIdtext={98}>
+                            <span className='special-effect'>Technical Help Content</span>
+                        </SectionTextRight>
                     </div>
                     <div className='activity-item'>
-                        <SectionPictureRight postIdtext={18} postIdphoto={6}>
-                            <span>Community Projects Content</span>
-                        </SectionPictureRight>
+                        <SectionTextRight postIdtext={100}>
+                            <span className='special-effect'>Community Projects Content</span>
+                        </SectionTextRight>
                     </div>
                     <div className='activity-item'>
-                        <SectionPictureRight postIdtext={20} postIdphoto={7}>
-                            <span>Education and Services Content</span>
-                        </SectionPictureRight>
+                        <SectionTextRight postIdtext={102}>
+                            <span className='special-effect'>Education and Services Content</span>
+                        </SectionTextRight>
                     </div>
                     <div className='activity-item'>
-                        <SectionPictureRight postIdtext={22} postIdphoto={8}>
-                            <span>Special Interest Content</span>
-                        </SectionPictureRight>
+                        <SectionTextRight postIdtext={22}>
+                            <span className='special-effect'>Special Interest Content</span>
+                        </SectionTextRight>
                     </div>
                 </SwipeableViews>
             </div>

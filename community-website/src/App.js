@@ -11,7 +11,7 @@ import Contact from './contact/Contact';
 import VenueHire from './venueHire/VenueHire';
 import './App.css';
 import ErrorBoundary from './ErrorBoundary';
-
+import BubbleBackground from './specialEffect/BubbleBackground'; // 引入新组件
 /**
  * 定义应用程序的主组件App。
  * 
@@ -22,8 +22,10 @@ function App() {
   return (
     <Router>
       <div className="App">
+      <BubbleBackground /> 
         <Navbar />
         <Routes>
+          <Route index element={<ErrorBoundary><Home /></ErrorBoundary>} />
           <Route path="/components" element={<ErrorBoundary><Home /></ErrorBoundary>} />
           <Route path="/aboutUs" element={<ErrorBoundary><AboutUs /></ErrorBoundary>} />
           <Route path="/services" element={<ErrorBoundary><Services /></ErrorBoundary>} />

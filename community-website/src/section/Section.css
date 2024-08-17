@@ -6,7 +6,7 @@
   padding: 20px;
   border: 1px solid #ddd;
   margin: 10px auto; /* 水平居中 */
-  max-width: 80%;
+  max-width: 100%;
   background-color: #f9f9f9; /* 淡灰色背景 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
   border-radius: 12px; /* 圆角 */
@@ -17,10 +17,12 @@
   transform: scale(1.02); /* 放大效果 */
 }
 
-.image-container {
+.image-container，.text-container {
   width: 100%;
   max-width: 600px;
   text-align: left;
+  flex: 1; /* 使容器平分空间 */
+  margin: 10px; /* 添加间距 */
 }
 
 .image-container img {
@@ -45,16 +47,6 @@
   color: #666;
   font-size: 16px;
   border-radius: 12px;
-}
-
-.text-container {
-  width: 100%;
-  max-width: 600px;
-  text-align: left;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影 */
 }
 
 .text-container h2 {
